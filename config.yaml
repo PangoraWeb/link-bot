@@ -1,0 +1,651 @@
+---
+# Set to true if you want to see log messages. False if not
+# (Note I cant control log messages sent by the bot library so those will still show. Just ones thrown by the bot wont)
+showLogs: true
+# ------------------------------------------------------------------------------
+
+responseMessage: |
+  Here are some possibly related communities in the instance:
+
+  ${INSTANCES}
+
+  Feel free to crosspost into them or post future content on this topic there if they are relevant.  
+  I am a bot and this was performed automatically 🤖 For any issues contact [Ategon](/u/ategon@programming.dev).
+
+instances:
+  programming.dev:
+    programming:
+      keywords:
+        - programming
+    gamedev:
+      keywords:
+        - gamedev
+        - game
+        - gamejam
+        - epic games
+        - steam
+        - bevy
+        - gdevelop
+    gamedev_news:
+      keywords:
+        - epic games
+        - steam
+        - capcom
+        - activision
+        - blizzard
+        - atari
+    neovim:
+      keywords:
+        - neovim
+        - vim
+        - nvim
+    auai:
+      keywords:
+        - auai
+        - artificial intelligence
+        - ai
+        - machine learning
+        - ml
+        - deep learning
+        - dl
+        - tensorflow
+        - pytorch
+        - keras
+        - scikit-learn
+        - scikitlearn
+        - sklearn
+        - artificialintelligence
+        - machinelearning
+        - deeplearning
+    cpp:
+      keywords:
+        - cpp
+        - c\+\+
+        - cplusplus
+        - c plus plus
+    git:
+      keywords:
+        - git
+        - github
+        - gitlab
+        - gitea
+    nix:
+      keywords:
+        - nix
+        - nixos
+        - nixpkgs
+    dotnet:
+      keywords:
+        - dotnet
+        - \.net
+        - dot net
+        - c#
+        - csharp
+        - c sharp
+        - f#
+        - fsharp
+        - f sharp
+    commandline:
+      keywords:
+        - commandline
+        - command line
+        - cli
+        - terminal
+        - bash
+        - zsh
+        - fish
+        - powershell
+        - cmd
+        - commandprompt
+        - command prompt
+    golang:
+      keywords:
+        - golang
+        - go
+    android_dev:
+      keywords:
+        - android
+        - androiddev
+        - androiddevelopment
+    opensource:
+      keywords:
+        - opensource
+        - open source
+        - foss
+    html:
+      keywords:
+        - html
+    css:
+      keywords:
+        - css
+    rust:
+      keywords:
+        - rust
+    python:
+      keywords:
+        - python
+    java:
+      keywords:
+        - java
+    godot:
+      keywords:
+        - godot
+    javascript:
+      keywords:
+        - javascript
+        - js
+        - nodejs
+        - node\.js
+        - node
+    nodejs:
+      keywords:
+        - nodejs
+        - node\.js
+        - node
+    webdev:
+      keywords:
+        - webdev
+        - web
+        - react
+        - vue
+        - angular
+        - html
+        - css
+    linux:
+      keywords:
+        - linux
+        - ubuntu
+        - debian
+        - arch
+        - fedora
+        - redhat
+        - centos
+    android:
+      keywords:
+        - android
+    typescript:
+      keywords:
+        - typescript
+        - ts
+    react:
+      keywords:
+        - react
+        - reactjs
+        - react\.js
+    uiux:
+      keywords:
+        - ui
+        - ux
+        - uiux
+        - user interface
+        - userinterface
+        - user experience
+        - userexperience
+    scala:
+      keywords:
+        - scala
+    kotlin:
+      keywords:
+        - kotlin
+    pangora:
+      keywords:
+        - pangora
+    haskell:
+      keywords:
+        - haskell
+    sql:
+      keywords:
+        - sql
+    networking:
+      keywords:
+        - networking
+    postgresql:
+      keywords:
+        - postgresql
+    raspberry_pi:
+      keywords:
+        - raspberry pi
+        - raspberrypi
+        - rpi
+    truenas:
+      keywords:
+        - truenas
+        - freenas
+    vscode:
+      keywords:
+        - vscode
+        - visual studio code
+        - visualstudiocode
+        - visual studio
+        - visualstudio
+    a11y:
+      keywords:
+        - a11y
+        - accessibility
+        - accessible
+    helix:
+      keywords:
+        - helix
+        - helixeditor
+    loud:
+      keywords:
+        - cloud
+        - aws
+        - azure
+        - gcp
+        - google cloud
+        - googlecloud
+        - googlecloudplatform
+    django:
+      keywords:
+        - django
+    elixir:
+      keywords:
+        - elixir
+    performance:
+      keywords:
+        - performance
+        - optimisation
+        - optimization
+    lemmy_dev:
+      keywords:
+        - lemmy
+        - lemmydev
+    csharp:
+      keywords:
+        - csharp
+        - c#
+    unreal_engine:
+      keywords:
+        - unreal
+        - unrealengine
+        - ue4
+    angular:
+      keywords:
+        - angular
+    c_lang:
+      keywords:
+        - c
+        - clang
+    shell:
+      keywords:
+        - shell
+        - bash
+        - zsh
+        - fish
+        - powershell
+        - cmd
+        - commandprompt
+        - command prompt
+    robotics:
+      keywords:
+        - robotics
+        - robot
+        - robots
+    docker:
+      keywords:
+        - docker
+    kubernetes:
+      keywords:
+        - kubernetes
+        - k8s
+    devops:
+      keywords:
+        - devops
+    bun:
+      keywords:
+        - bun
+    ios_dev:
+      keywords:
+        - ios
+        - swift
+    tmux:
+      keywords:
+        - tmux
+    intellij:
+      keywords:
+        - intellij
+        - intellijidea
+        - intellij idea
+    ddd:
+      keywords:
+        - ddd
+        - domain driven design
+        - domain-driven design
+    php:
+      keywords:
+        - php
+    security:
+      keywords:
+        - security
+    sveltejs:
+      keywords:
+        - svelte
+        - sveltejs
+        - svelte\.js
+    pwa:
+      keywords:
+        - pwa
+        - progressive web app
+        - progressive webapp
+    swift:
+      keywords:
+        - swift
+    web_hosting:
+      keywords:
+        - webhosting
+        - web hosting
+        - hosting
+    dart:
+      keywords:
+        - dart
+    bsd:
+      keywords:
+        - bsd
+        - freebsd
+        - openbsd
+        - netbsd
+    formal_methods:
+      keywords:
+        - formalmethods
+        - formal methods
+    osdev:
+      keywords:
+        - osdev
+        - os dev
+        - os development
+        - osdevelopment
+    roguelikedev:
+      keywords:
+        - roguelikedev
+        - roguelike dev
+        - roguelike development
+    latex:
+      keywords:
+        - latex
+    matlab:
+      keywords:
+        - matlab
+    ada:
+      keywords:
+        - ada
+    ros:
+      keywords:
+        - ros
+        - robot operating system
+    arduino:
+      keywords:
+        - arduino
+    laravel:
+      keywords:
+        - laravel
+    activitypub:
+      keywords:
+        - activitypub
+    clojure:
+      keywords:
+        - clojure
+    perl:
+      keywords:
+        - perl
+    concatenative:
+      keywords:
+        - concatenative
+        - forth
+        - factor
+        - joy
+        - cat
+        - stack
+        - stackbased
+        - stack based
+    asm:
+      keywords:
+        - asm
+        - assembly
+        - assemblylanguage
+        - assembly language
+    advent_of_code:
+      keywords:
+        - adventofcode
+        - advent of code
+    podman:
+      keywords:
+        - podman
+    bioinformatics:
+      keywords:
+        - bioinformatics
+    unity:
+      keywords:
+        - unity
+    lemoa:
+      keywords:
+        - lemoa
+    emacs:
+      keywords:
+        - emacs
+    showoff:
+      keywords:
+        - showoff
+        - show lemmy
+        - show hacker news
+    voxel_dev:
+      keywords:
+        - voxel
+        - voxeldev
+    lua:
+      keywords:
+        - lua
+    regex:
+      keywords:
+        - regex
+        - regular expression
+        - regularexpression
+    webassembly:
+      keywords:
+        - webassembly
+        - wasm
+    xrdev:
+      keywords:
+        - xr
+        - vr
+        - ar
+        - xrdev
+        - vrdev
+        - ardev
+    nim:
+      keywords:
+        - nim
+    text_editors:
+      keywords:
+        - texteditors
+        - text editors
+        - texteditor
+        - text editor
+    machine_learning:
+      keywords:
+        - machinelearning
+        - machine learning
+        - ml
+    sdl:
+      keywords:
+        - sdl
+        - simple directmedia layer
+        - simpledirectmedialayer
+        - simple direct media layer
+    r_programming:
+      keywords:
+        - r
+        - rprogramming
+        - r programming
+    haxe:
+      keywords:
+        - haxe
+    raku:
+      keywords:
+        - raku
+    vlang:
+      keywords:
+        - vlang
+        - v
+    fsharp:
+      keywords:
+        - fsharp
+        - f#
+        - f sharp
+    functional_programming:
+      keywords:
+        - functionalprogramming
+        - functional programming
+        - functional
+    flutter:
+      keywords:
+        - flutter
+    forgejo:
+      keywords:
+        - forgejo
+    sysadmin:
+      keywords:
+        - sysadmin
+    mongodb:
+      keywords:
+        - mongodb
+    pulumi:
+      keywords:
+        - pulumi
+    game_design:
+      keywords:
+        - gamedesign
+        - game design
+    rails:
+      keywords:
+        - rails
+        - ruby on rails
+    powershell:
+      keywords:
+        - powershell
+    termux:
+      keywords:
+        - termux
+    ruby:
+      keywords:
+        - ruby
+    julia:
+      keywords:
+        - julia
+    esolangs:
+      keywords:
+        - esolangs
+        - esoteric programming language
+        - esotericprogramminglanguage
+        - esoteric programming
+        - esotericprogramming
+    data_engineering:
+      keywords:
+        - dataengineering
+        - data engineering
+    lisp:
+      keywords:
+        - lisp
+    lifestyle:
+      keywords:
+        - lifestyle
+    emudev:
+      keywords:
+        - emudev
+        - emu dev
+        - emu development
+        - emudevelopment
+    astro:
+      keywords:
+        - astro
+    software_testing:
+      keywords:
+        - softwaretesting
+        - software testing
+        - testing
+    nuxt:
+      keywords:
+        - nuxt
+        - nuxtjs
+        - nuxt\.js
+    gnome_dev:
+      keywords:
+        - gnome
+        - gnome dev
+        - gnome development
+        - gnomedev
+        - gnomedevelopment
+    javafx:
+      keywords:
+        - javafx
+    ludumdare:
+      keywords:
+        - ludumdare
+        - ludum dare
+    gitea:
+      keywords:
+        - gitea
+    terraform:
+      keywords:
+        - terraform
+    cobol:
+      keywords:
+        - cobol
+    erlang:
+      keywords:
+        - erlang
+    code_golf:
+      keywords:
+        - codegolf
+        - code golf
+    ahk:
+      keywords:
+        - ahk
+        - autohotkey
+    graphql:
+      keywords:
+        - graphql
+    minecraft_dev:
+      keywords:
+        - minecraft
+        - minecraftdev
+        - minecraft dev
+        - minecraft development
+    mobiledev:
+      keywords:
+        - mobiledev
+        - mobile dev
+        - mobile development
+    vuejs:
+      keywords:
+        - vue
+        - vuejs
+        - vue\.js
+    pico8:
+      keywords:
+        - pico8
+        - pico-8
+        - pico 8
+    gentoo:
+      keywords:
+        - gentoo
+    tauri:
+      keywords:
+        - tauri
+    engineering_resumes:
+      keywords:
+        - engineeringresumes
+        - engineering resumes
+        - engineeringresume
+        - engineering resume
+    devlogs:
+      keywords:
+        - devlogs
+        - devlog
+    cs_majors:
+      keywords:
+        - csmajors
+        - cs majors
+        - cs major
+        - computer science majors
+        - computer science major
