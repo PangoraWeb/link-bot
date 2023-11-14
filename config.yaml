@@ -14,9 +14,6 @@ responseMessage: |
 
 instances:
   programming.dev:
-    programming:
-      keywords:
-        - programming
     gamedev:
       keywords:
         - gamedev
