@@ -101,7 +101,6 @@ instances:
     golang:
       keywords:
         - golang
-        - go
     android_dev:
       keywords:
         - android
