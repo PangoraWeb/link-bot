@@ -142,9 +142,6 @@ instances:
       keywords:
         - webdev
         - web
-        - react
-        - vue
-        - angular
         - html
         - css
     linux:
@@ -261,7 +258,6 @@ instances:
         - angular
     c_lang:
       keywords:
-        - c
         - clang
     shell:
       keywords:
@@ -482,7 +478,6 @@ instances:
     vlang:
       keywords:
         - vlang
-        - v
     fsharp:
       keywords:
         - fsharp

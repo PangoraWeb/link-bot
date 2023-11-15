@@ -1,4 +1,7 @@
+import chalk from 'chalk'
 import { instances, responseMessage } from '../common/config.js'
+import db from '../common/database.js'
+import { LogCategory, log } from '../common/log.js'
 
 export default async ({
   postView: { post, community },
@@ -11,6 +14,10 @@ export default async ({
   if (
     !instances[getCommunityInstance(community)].hasOwnProperty(community.name)
   ) {
+    return
+  }
+
+  if (!post.name) {
     return
   }
 
@@ -27,9 +34,33 @@ export default async ({
       continue
     }
 
+    const matches = await new Promise(function (resolve, reject) {
+      db.all(
+        `SELECT COUNT(*) as count FROM triggeredon WHERE community = ? AND name = ?`,
+        [matchingCommunity, post.name],
+        (err, rows) => {
+          if (err) {
+            reject(err)
+          }
+
+          if (!rows) {
+            resolve(0)
+          }
+
+          resolve(rows[0].count)
+        }
+      )
+    })
+
+    if (matches > 0) {
+      continue
+    }
+
     const words = post.name.match(
       new RegExp(
-        `(?:^|[^A-z])(?:${communityValue.keywords.join('|')})(?:$|[^A-z])`,
+        `(?:^|[^A-Za-z0-9])(?:${communityValue.keywords.join(
+          '|'
+        )})(?:$|[^A-Za-z0-9])`,
         'gi'
       )
     )
@@ -52,6 +83,17 @@ export default async ({
     ),
     post_id: post.id,
   })
+
+  db.run(
+    `INSERT INTO triggeredon (community, name) VALUES (?, ?)`,
+    [community.name, post.name],
+    (err) => {
+      if (err) {
+        return console.error(err.message)
+      }
+      log('DB', 'Inserted new post into database.', LogCategory.SUCCESS)
+    }
+  )
 }
 
 function getCommunityInstance(community) {
